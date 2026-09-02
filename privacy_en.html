@@ -2,164 +2,410 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<script>
-		var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
-            CSS.supports('top: constant(a)'))
-        document.write(
-            '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
-            (coverSupport ? ', viewport-fit=cover' : '') + '" />')
-	</script>
-	<title>NewHub Privacy Policy</title>
-	<!--preload-links-->
-	<!--app-context-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Privacy Policy</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			font-size: 15px;
+			line-height: 1.85;
+			color: #333;
+			background: linear-gradient(180deg, #e8ecf3 0%, #f0f2f5 40%, #f5f5f7 100%);
+			margin: 0;
+			padding: 0;
+		}
+		#app {
+			max-width: 820px;
+			margin: 0 auto;
+			padding: 50px 24px 70px;
+		}
+
+		/* ===== Hero Header ===== */
+		.hero {
+			text-align: center;
+			padding: 48px 24px 40px;
+			margin-bottom: 28px;
+			background: linear-gradient(135deg, #1a2a4f 0%, #2d4a7f 50%, #3a5a93 100%);
+			border-radius: 16px;
+			box-shadow: 0 8px 30px rgba(26, 42, 79, 0.25);
+		}
+		.hero h1 {
+			font-size: 34px;
+			font-weight: 800;
+			color: #ffffff;
+			margin: 0 0 10px;
+			letter-spacing: 0.5px;
+		}
+		.hero .subtitle {
+			font-size: 15px;
+			color: rgba(255, 255, 255, 0.75);
+			margin: 0 0 6px;
+		}
+		.hero .meta {
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.6);
+			margin: 0;
+		}
+		.hero .divider {
+			width: 60px;
+			height: 3px;
+			background: rgba(255, 255, 255, 0.35);
+			border-radius: 2px;
+			margin: 16px auto 0;
+		}
+
+		/* ===== Intro ===== */
+		.intro {
+			background: #fff;
+			border-radius: 14px;
+			padding: 24px 28px;
+			margin-bottom: 20px;
+			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+			border-left: 4px solid #3a5a93;
+		}
+
+		/* ===== Section Cards ===== */
+		.section {
+			background: #fff;
+			border-radius: 14px;
+			padding: 28px 28px;
+			margin-bottom: 20px;
+			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+			transition: box-shadow 0.2s ease;
+		}
+		.section:hover {
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		}
+
+		/* ===== Headings ===== */
+		h2 {
+			font-size: 21px;
+			font-weight: 700;
+			color: #1a2a4f;
+			text-align: center;
+			margin: 0 0 20px;
+			padding-bottom: 12px;
+			position: relative;
+		}
+		h2::after {
+			content: "";
+			display: block;
+			width: 48px;
+			height: 3px;
+			background: linear-gradient(90deg, #3a5a93, #6b8ec9);
+			border-radius: 2px;
+			margin: 10px auto 0;
+		}
+		h3 {
+			font-size: 16px;
+			font-weight: 700;
+			color: #2c4a6f;
+			margin: 24px 0 8px;
+			padding-left: 12px;
+			border-left: 3px solid #6b8ec9;
+		}
+
+		/* ===== Text & Lists ===== */
+		p {
+			margin: 10px 0;
+		}
+		ul, ol {
+			padding-left: 24px;
+			margin: 10px 0;
+		}
+		ul li, ol li {
+			margin: 8px 0;
+		}
+		ul li strong, ol li strong {
+			color: #1a2a4f;
+		}
+
+		/* ===== Definition List ===== */
+		.definition-list {
+			list-style: none;
+			padding-left: 0;
+		}
+		.definition-list li {
+			padding: 10px 14px;
+			border-bottom: 1px solid #f0f0f0;
+			border-radius: 6px;
+			transition: background 0.15s ease;
+		}
+		.definition-list li:hover {
+			background: #f8faff;
+		}
+		.definition-list li:last-child {
+			border-bottom: none;
+		}
+		.definition-list li strong {
+			display: inline-block;
+			min-width: 150px;
+			color: #1a2a4f;
+		}
+
+		/* ===== Contact Box ===== */
+		.contact-box {
+			background: linear-gradient(135deg, #eef4ff 0%, #e8f0ff 100%);
+			border: 1px solid #c5d9f5;
+			border-radius: 12px;
+			padding: 20px 24px;
+			margin: 16px 0;
+		}
+		.contact-box p {
+			margin: 6px 0;
+		}
+		.contact-box strong {
+			color: #1a2a4f;
+		}
+
+		/* ===== Footer divider ===== */
+		.footer-note {
+			text-align: center;
+			font-size: 13px;
+			color: #999;
+			margin-top: 30px;
+			padding-top: 20px;
+			border-top: 1px solid #e0e0e0;
+		}
+
+		/* ===== Responsive ===== */
+		@media (max-width: 600px) {
+			#app {
+				padding: 24px 12px 40px;
+			}
+			.hero {
+				padding: 32px 16px 28px;
+			}
+			.hero h1 {
+				font-size: 26px;
+			}
+			.section, .intro {
+				padding: 18px 16px;
+			}
+			h2 {
+				font-size: 18px;
+			}
+			.definition-list li strong {
+				display: block;
+				min-width: auto;
+			}
+		}
+	</style>
 </head>
-<style>
-	#app {
-        font-size: 15px;
-    }
-
-    .title {
-        font-weight: bold;
-        font-size: 20px;
-    }
-
-    .text {
-        font-weight: bold;
-        font-size: 18px;
-    }
-</style>
 <body>
 <div id="app">
 
+	<div class="hero">
+		<p class="subtitle">Your Privacy Matters</p>
+		<h1>Privacy Policy</h1>
+		<p class="meta">Last Updated: January 1, 2025</p>
+		<div class="divider"></div>
+	</div>
 
-	<div>NewHub Privacy Policy</div><br />
+	<div class="intro">
+		<p>This Privacy Policy describes the policies and procedures regarding the collection, use, and disclosure of information when you use this Application, and informs you about your privacy rights and how the law protects you.</p>
+		<p>We use your personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
+	</div>
 
-	<div style="font-size: 28px;font-weight: bold;">Privacy Policy</div>
-	Last Updated: January 1, 2025<br><br>
+	<!-- ==================== Interpretation and Definitions ==================== -->
+	<div class="section">
+		<h2>Interpretation and Definitions</h2>
 
-	This Privacy Policy describes the policies and procedures regarding the collection, use, and disclosure of information when you use this Service, and informs you about your privacy rights and how the law protects you.<br>
+		<h3>Interpretation</h3>
+		<p>Words with initial letters capitalized have the meanings defined under the following conditions. Regardless of whether they appear in singular or plural form, the meanings of the following definitions shall remain the same.</p>
 
-	We use your personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.<br><br>
+		<h3>Definitions</h3>
+		<p>For the purposes of this Privacy Policy:</p>
+		<ul class="definition-list">
+			<li><strong>Account</strong> refers to a unique account created for you to access our Service or parts of our Service.</li>
+			<li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity, or other securities, or the right to vote for the election of directors or other governing bodies.</li>
+			<li><strong>Application</strong> refers to the software program provided by the Company.</li>
+			<li><strong>Company</strong> (referred to as "the Company", "we", "us", or "our" in this Agreement) refers to Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</li>
+			<li><strong>Country</strong> refers to: China</li>
+			<li><strong>Device</strong> refers to any device that can access the Service, such as a computer, mobile phone, or digital tablet.</li>
+			<li><strong>Personal Data</strong> refers to any information relating to an identified or identifiable individual.</li>
+			<li><strong>Service</strong> refers to the software program provided by the Company.</li>
+			<li><strong>Service Provider</strong> refers to any natural or legal person who processes data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, provide the Service on behalf of the Company, perform services related to the Service, or assist the Company in analyzing how the Service is used.</li>
+			<li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+			<li><strong>You</strong> refers to the individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+		</ul>
+	</div>
 
-	<div style="font-size: 28px;font-weight: bold;">Interpretation and Definitions</div><br>
-	<div class="title">Interpretation</div><br>
-	Words with initial letters capitalized have the meanings defined under the following conditions. Regardless of whether they appear in singular or plural form, the meanings of the following definitions shall remain the same.<br><br>
+	<!-- ==================== Data Controller ==================== -->
+	<div class="section">
+		<h2>Data Controller Information</h2>
+		<p>For the purposes of applicable data protection laws, including the EU General Data Protection Regulation (GDPR) and the EU Data Act, the Company is the data controller responsible for the processing of your Personal Data. You may contact us at any time regarding the processing of your Personal Data.</p>
+		<div class="contact-box">
+			<p><strong>Data Controller:</strong> Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</p>
+			<p><strong>Contact Email:</strong> 15816483354@sohu.com</p>
+		</div>
+	</div>
 
-	<div class="title">Definitions</div><br>
-	<span class="title">For the purposes of this Privacy Policy:</span><br><br>
-	<ul style="padding-left: 30px;">
-		<li>
-			<span class="text">Account</span> refers to a unique account created for you to access our Service or parts of our Service.
-		</li><br>
+	<!-- ==================== Collection and Use of Information ==================== -->
+	<div class="section">
+		<h2>Collection and Use of Information</h2>
 
-		<li>
-			<span class="text">Affiliate</span> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity, or other securities, or the right to vote for the election of directors or other governing bodies.
-		</li><br>
+		<h3>Personal Information</h3>
+		<p>When using our Application, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:</p>
+		<ul>
+			<li>Email address</li>
+			<li>First name and last name</li>
+			<li>Phone number</li>
+			<li>Address, state, province, postal code, city</li>
+		</ul>
+		<p><strong>Disclosure Statement:</strong> The purpose of collecting this information is solely to handle feedback or verify issues arising during your use of our Application. This is also to better improve your experience in using the product. This information will not be uploaded to or shared with any third parties for other purposes.</p>
 
-		<li>
-			<span class="text">Service</span> refers to the software program NewHub provided by the Company.
-		</li><br>
+		<h3>Usage Data</h3>
+		<p>Usage Data is collected automatically when using the Application. Usage Data may include information such as your device's Internet Protocol (IP) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the duration spent on those pages, unique device identifiers, and other diagnostic data.</p>
+		<p>When you access the Service through a mobile device or via a mobile device, we may automatically collect certain information, including but not limited to the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile device operating system, the type of mobile Internet browser you use, unique device identifiers, and other diagnostic data.</p>
+		<p><strong>Disclosure Statement:</strong> The purpose of this information is solely for: analyzing and locating product issues, collecting feedback on errors occurring when you connect external devices while using the Application, and quickly locating and resolving issues reported by users during product use through accurate device IDs.</p>
+	</div>
 
-		<li>
-			<span class="text">Company</span> (referred to as "the Company", "we", "us", or "our" in this Agreement) refers to Shenzhen Yongdong Kechuangxin Technology Co., Ltd.
-		</li><br>
+	<!-- ==================== Contact Information Collection ==================== -->
+	<div class="section">
+		<h2>Contact Information Collection</h2>
 
-		<li>
-			<span class="text">Country</span> refers to: China
-		</li><br>
+		<h3>1. Scope and Purpose of Information Collection</h3>
+		<p>Our Application only collects the contact information list in your device (including basic information such as contact names and phone numbers) when you actively use the core function "Contact Backup and Restore." The purpose of collection is unique and clear: solely to back up contact information to an external storage device designated by you (such as a Type-C mobile hard disk, USB flash drive, etc.), or to restore contacts from a backed-up external storage device to your device. There are no other usage scenarios.</p>
 
-		<li>
-			<span class="text">Device</span> refers to any device that can access the Service, such as a computer, mobile phone, or digital tablet.
-		</li><br>
+		<h3>2. Authorization Method and User Control Rights</h3>
+		<ol style="padding-left: 28px;">
+			<li><strong>Active Authorization Prompt:</strong> Before using the "Contact Backup and Restore" function, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to contacts"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;</li>
+			<li><strong>Right to Independent Choice:</strong> You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the "Contact Backup and Restore" function will be unavailable. All other important functions of the Application (such as file backup, photo album backup, device management, etc.) can operate normally without affecting your core user experience;</li>
+			<li><strong>Re-authorization Path:</strong> If you have denied the authorization, when you attempt to use the "Contact Backup and Restore" function again later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > [Application] > Permissions > Contacts" on your mobile phone. The permission status will take effect in real time.</li>
+		</ol>
 
-		<li>
-			<span class="text">Personal</span> Data refers to any information relating to an identified or identifiable individual.
-		</li><br>
+		<h3>3. Data Security and Compliance Commitments</h3>
+		<ol style="padding-left: 28px;">
+			<li><strong>No Additional Collection:</strong> Except for the contact information collected when you actively trigger the "Contact Backup and Restore" function, the Application will not automatically scan or silently collect your contact information in the background, nor will it collect other personal information unrelated to this function (such as device identifiers, location information, etc.);</li>
+			<li><strong>No Data Sharing/Leakage:</strong> We will not sell, lease, share, or provide your contact information to any third parties (including advertisers, data analysis institutions, partners, etc.) in any form. Backup data of contacts is only stored on the external storage device designated by you and will not be uploaded to the Application's cloud server;</li>
+			<li><strong>Ownership and Control of Data:</strong> You have full ownership and management rights over the backed-up contact data. You can view, modify, or delete the backed-up contact information at any time through the Application or the external storage device. The Application will not interfere with or retain any copies of the backup data.</li>
+		</ol>
+	</div>
 
-		<li>
-			<span class="text">Service</span> Provider refers to any natural or legal person who processes data on behalf of the Company.
-			It refers to third-party companies or individuals employed by the Company to facilitate the Service, provide the Service on behalf of the Company, perform services related to the Service, or assist the Company in analyzing how the Service is used.
-		</li><br>
+	<!-- ==================== File Information Management ==================== -->
+	<div class="section">
+		<h2>Management of All File Information</h2>
 
-		<li>
-			<span class="text">Usage Data</span> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).
-		</li><br>
+		<h3>1. Scope and Purpose of Collection</h3>
+		<p>The core functions of our Application are "Mobile Phone Backup" and "Photo Album Backup." We only collect file information explicitly selected by you in your device when you actively use these two functions. Specifically including:</p>
+		<ul>
+			<li>Media files: Pictures, videos, and music files in the photo album;</li>
+			<li>Non-media files: Documents (Word/Excel/PDF, etc.), compressed packages, installation packages, and other full-type files selected by you for backup.</li>
+		</ul>
+		<p>The scope of collection is strictly limited to the files or directories explicitly checked by you. We will not automatically scan or collect unauthorized file information in the device. All file information is only used to realize the core function of "backing up to an external storage device (such as a Type-C mobile hard disk, USB flash drive, etc.)" and has no other purposes.</p>
 
-		<li>
-			<span class="text">You</span> refers to the individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
-		</li>
-	</ul>
+		<h3>2. Authorization Method and User Control Rights</h3>
+		<ol style="padding-left: 28px;">
+			<li><strong>Permission Application Prompt:</strong> Before using the "Mobile Phone Backup" and "Photo Album Backup" functions, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to all files"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;</li>
+			<li><strong>Right to Independent Choice:</strong> You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the normal use of the "Mobile Phone Backup" and "Photo Album Backup" functions will be affected. Other non-core functions of the Application (such as viewing the list of backed-up files, device connection management, etc.) can operate normally;</li>
+			<li><strong>Re-authorization Path:</strong> If you have denied the authorization, when you reuse the backup function later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > [Application] > Permissions" on your mobile phone. The permission status will take effect in real time.</li>
+		</ol>
 
-	<div class="title">Collection and Use of Information Includes:</div><br>
+		<h3>3. Explanation of the Necessity of Permission</h3>
+		<p>Our Application applies for the "MANAGE_EXTERNAL_STORAGE" permission because the core functions need to support the backup and management of full-type files (including non-media files). Alternative solutions such as the MediaStore API can only access media files such as pictures, videos, and audio, and cannot cover the backup needs of non-media files such as documents and compressed packages. If this permission is removed, the core functions of "Mobile Phone Backup" and "Photo Album Backup" will not be realized, and your full backup needs cannot be met.</p>
 
-	<div class="text">Personal Information</div><br>
+		<h3>4. Data Security and Compliance Commitments</h3>
+		<ol style="padding-left: 28px;">
+			<li><strong>No Additional Collection:</strong> Except for the file information you actively select for backup, the Application will not collect or store system files in the device, files in the private directories of other applications, or personal information unrelated to the backup function (such as device identifiers, location information, etc.);</li>
+			<li><strong>No Data Sharing/Leakage:</strong> We will not sell, lease, share, or provide your file information to any third parties (including advertisers, data analysis institutions, etc.) in any form, nor will we upload file information to the cloud server. All backup files are only stored on the external storage device designated by you;</li>
+			<li><strong>Restrictions on Permission Use:</strong> This permission is only used when you actively trigger a backup operation. After the operation is completed, file access will be terminated immediately. There is no behavior of continuously accessing or scanning files in the background;</li>
+			<li><strong>Ownership and Control of Data:</strong> You have full ownership and management rights over all backup files. You can delete or modify backup files at any time through the Application or external devices. The Application will not interfere with or retain any copies of the files.</li>
+		</ol>
+	</div>
 
-	When using our Application, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:<br>
-	<ul style="padding-left: 30px;">
-		<li>Email address</li><br>
-		<li>First name and last name</li><br>
-		<li>Phone number</li><br>
-		<li>Address, state, province, postal code, city</li>
-	</ul>
-	Disclosure Statement: The purpose of collecting this information is solely to handle feedback or verify issues arising during your use of our Application. This is also to better improve your experience in using the product. This information will not be uploaded to or shared with any third parties for other purposes.<br><br>
+	<!-- ==================== Legal Basis (GDPR) ==================== -->
+	<div class="section">
+		<h2>Legal Basis for Processing</h2>
+		<p>We process your Personal Data on the following legal bases in accordance with applicable data protection laws, including the GDPR:</p>
+		<ul>
+			<li><strong>Consent:</strong> Where you have given clear and affirmative consent to the processing of your Personal Data for specific purposes (e.g., providing personal information for feedback or issue verification).</li>
+			<li><strong>Contractual Necessity:</strong> Where processing is necessary for the performance of a contract to which you are a party or in order to take steps at your request prior to entering into a contract.</li>
+			<li><strong>Legitimate Interests:</strong> Where processing is necessary for the purposes of the legitimate interests pursued by the Company, such as diagnosing technical issues, improving the Service, and ensuring the security of the Application.</li>
+			<li><strong>Legal Obligation:</strong> Where processing is necessary for compliance with a legal obligation to which the Company is subject.</li>
+		</ul>
+		<p>You have the right to withdraw your consent at any time by contacting us at the email provided below. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.</p>
+	</div>
 
-	<div class="title">Usage Data</div><br>
+	<!-- ==================== Data Retention ==================== -->
+	<div class="section">
+		<h2>Data Retention</h2>
+		<p>We retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy, or as required by applicable laws and regulations. Specifically:</p>
+		<ul>
+			<li><strong>Personal Information</strong> (such as name, email, phone number, address) provided for feedback or issue verification is retained only until the relevant issue is resolved, and thereafter deleted upon your request or within a reasonable period.</li>
+			<li><strong>Usage Data</strong> is retained for the minimum period necessary to diagnose and resolve technical issues and improve the Service, after which it is deleted or anonymized.</li>
+			<li><strong>Contact and File Backup Data</strong> is stored solely on the external storage device designated by you. The Company does not retain any copies of such data on its servers. You may delete such data at any time through the Application or the external storage device.</li>
+		</ul>
+	</div>
 
-	Usage Data is collected automatically when using the Application. Usage Data may include information such as your device's Internet Protocol (IP) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the duration spent on those pages, unique device identifiers, and other diagnostic data.<br>
-	When you access the Service through a mobile device or via a mobile device, we may automatically collect certain information, including but not limited to the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile device operating system, the type of mobile Internet browser you use, unique device identifiers, and other diagnostic data.<br>
-	Disclosure Statement: The purpose of this information is solely for: analyzing and locating product issues, collecting feedback on errors occurring when you connect external devices while using the Application, and quickly locating and resolving issues reported by users during product use through accurate device IDs.<br><br>
+	<!-- ==================== Data Sharing and Disclosure ==================== -->
+	<div class="section">
+		<h2>Data Sharing and Disclosure</h2>
+		<p>We do not sell, rent, lease, share, or otherwise provide your Personal Data to any third party for commercial, advertising, or analytics purposes. Your data is processed and stored locally on your device or on the external storage device designated by you.</p>
+		<p>We may disclose your Personal Data only in the following limited circumstances:</p>
+		<ul>
+			<li><strong>Service Providers:</strong> We may engage third-party service providers to facilitate the Service, perform services on our behalf, or assist in analyzing how the Service is used. These service providers are bound by confidentiality obligations and are only permitted to process Personal Data for the purposes of providing the Service to you.</li>
+			<li><strong>Legal Requirements:</strong> We may disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.</li>
+		</ul>
+	</div>
 
+	<!-- ==================== International Data Transfers ==================== -->
+	<div class="section">
+		<h2>International Data Transfers</h2>
+		<p>The Company is based in China. Your Personal Data is primarily processed and stored on your device or on external storage devices designated by you. We do not transfer your Personal Data to cloud servers or to any party outside of China for processing.</p>
+		<p>In the event that any Personal Data is transferred to a third country, we will ensure that such transfer is carried out in accordance with applicable data protection laws, including by using appropriate safeguards such as Standard Contractual Clauses (SCCs) approved by the European Commission.</p>
+	</div>
 
-	<div class="title">Contact Information</div><br>
+	<!-- ==================== Data Subject Rights ==================== -->
+	<div class="section">
+		<h2>Your Privacy Rights (EU/EEA/UK Users)</h2>
+		<p>If you are located in the European Union, the European Economic Area, or the United Kingdom, you have the following rights regarding your Personal Data under the GDPR:</p>
+		<ul>
+			<li><strong>Right of Access:</strong> You have the right to request access to your Personal Data and to obtain copies of it.</li>
+			<li><strong>Right to Rectification:</strong> You have the right to request the correction of any inaccurate or incomplete Personal Data.</li>
+			<li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> You have the right to request the deletion of your Personal Data, subject to certain exceptions.</li>
+			<li><strong>Right to Restriction of Processing:</strong> You have the right to request that we restrict the processing of your Personal Data under certain conditions.</li>
+			<li><strong>Right to Data Portability:</strong> You have the right to receive your Personal Data in a structured, commonly used, and machine-readable format and to transmit it to another controller.</li>
+			<li><strong>Right to Object:</strong> You have the right to object to the processing of your Personal Data based on legitimate interests or for direct marketing purposes.</li>
+			<li><strong>Right to Withdraw Consent:</strong> You have the right to withdraw your consent to the processing of your Personal Data at any time, without affecting the lawfulness of processing prior to withdrawal.</li>
+		</ul>
+		<p>To exercise any of these rights, please contact us at <strong>15816483354@sohu.com</strong>. We will respond to your request within the timeframe required by applicable law (generally within one month).</p>
 
-	### 1. Scope and Purpose of Information Collection<br><br>
-	Our Application only collects the contact information list in your device (including basic information such as contact names and phone numbers) when you actively use the core function "Contact Backup and Restore". The purpose of collection is unique and clear: solely to back up contact information to an external storage device designated by you (such as a Type-C mobile hard disk, USB flash drive, etc.), or to restore contacts from a backed-up external storage device to your device. There are no other usage scenarios.<br><br>
+		<h3>Right to Lodge a Complaint</h3>
+		<p>You have the right to lodge a complaint with a supervisory authority, in particular in the EU member state of your habitual residence, place of work, or the place of the alleged infringement, if you believe that our processing of your Personal Data infringes applicable data protection laws.</p>
+	</div>
 
-	### 2. Authorization Method and User Control Rights<br><br>
-	1. <strong>Active Authorization Prompt</strong>: Before using the "Contact Backup and Restore" function, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to contacts"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;<br>
-	2. <strong>Right to Independent Choice</strong>: You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the "Contact Backup and Restore" function will be unavailable. All other important functions of the Application (such as file backup, photo album backup, device management, etc.) can operate normally without affecting your core user experience;<br>
-	3. <strong>Re-authorization Path</strong>: If you have denied the authorization, when you attempt to use the "Contact Backup and Restore" function again later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > NewHub > Permissions > Contacts" on your mobile phone. The permission status will take effect in real time.<br><br>
+	<!-- ==================== Children's Privacy ==================== -->
+	<div class="section">
+		<h2>Children's Privacy</h2>
+		<p>Our Application is not directed to children under the age of 16. We do not knowingly collect any Personal Data from children. If you are a parent or guardian and you believe your child has provided us with Personal Data, please contact us so that we can take appropriate action to delete such data.</p>
+	</div>
 
-	### 3. Data Security and Compliance Commitments<br><br>
-	1. <strong>No Additional Collection</strong>: Except for the contact information collected when you actively trigger the "Contact Backup and Restore" function, the Application will not automatically scan or silently collect your contact information in the background, nor will it collect other personal information unrelated to this function (such as device identifiers, location information, etc.);<br>
-	2. <strong>No Data Sharing/Leakage</strong>: We will not sell, lease, share, or provide your contact information to any third parties (including advertisers, data analysis institutions, partners, etc.) in any form. Backup data of contacts is only stored on the external storage device designated by you and will not be uploaded to the Application's cloud server;<br>
-	3. <strong>Ownership and Control of Data</strong>: You have full ownership and management rights over the backed-up contact data. You can view, modify, or delete the backed-up contact information at any time through the Application or the external storage device. The Application will not interfere with or retain any copies of the backup data.<br><br>
+	<!-- ==================== Other Matters ==================== -->
+	<div class="section">
+		<h2>Other Matters</h2>
 
+		<h3>Limited Liability</h3>
+		<p>You shall not use the Application in any way that may violate local and international laws. If you have any doubts about compliance with the law, please uninstall the Application.</p>
 
-	<div class="title">Management of All File Information</div><br>
+		<h3>Changes to This Privacy Policy</h3>
+		<p>This Privacy Policy may be updated from time to time due to changes in laws and regulations, function optimizations, and other circumstances. After the update, we will prompt you to view it in a prominent position within the Application (such as the splash screen, settings page). Your continued use of the Application after the update indicates your acceptance of the updated Privacy Policy.</p>
 
-	<!-- Optimized compliant content -->
-	1. Scope and Purpose of Collection<br><br>
-	The core functions of our Application are "Mobile Phone Backup" and "Photo Album Backup". We only collect file information explicitly selected by you in your device when you actively use these two functions. Specifically including:<br>
-	1. Media files: Pictures, videos, and music files in the photo album;<br>
-	2. Non-media files: Documents (Word/Excel/PDF, etc.), compressed packages, installation packages, and other full-type files selected by you for backup.<br>
-	The scope of collection is strictly limited to the files or directories explicitly checked by you. We will not automatically scan or collect unauthorized file information in the device. All file information is only used to realize the core function of "backing up to an external storage device (such as a Type-C mobile hard disk, USB flash drive, etc.)" and has no other purposes.<br><br>
+		<h3>Contact Us</h3>
+		<p>If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your Personal Data, please contact us at:</p>
+		<div class="contact-box">
+			<p><strong>Company:</strong> Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</p>
+			<p><strong>Email:</strong> 15816483354@sohu.com</p>
+		</div>
+	</div>
 
-	2. Authorization Method and User Control Rights<br><br>
-	1. <strong>Permission Application Prompt</strong>: Before using the "Mobile Phone Backup" and "Photo Album Backup" functions, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to all files"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;<br>
-	2. <strong>Right to Independent Choice</strong>: You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the normal use of the "Mobile Phone Backup" and "Photo Album Backup" functions will be affected. Other non-core functions of the Application (such as viewing the list of backed-up files, device connection management, etc.) can operate normally;<br>
-	3. <strong>Re-authorization Path</strong>: If you have denied the authorization, when you reuse the backup function later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > NewHub > Permissions" on your mobile phone. The permission status will take effect in real time.<br><br>
+	<div class="footer-note">
+		&copy; 2025 Shenzhenshiguangyuantongdadianzishangwu Co., Ltd. All rights reserved.
+	</div>
 
-	3. Explanation of the Necessity of Permission<br><br>
-	Our Application applies for the "MANAGE_EXTERNAL_STORAGE" permission because the core functions need to support the backup and management of full-type files (including non-media files). Alternative solutions such as the MediaStore API can only access media files such as pictures, videos, and audio, and cannot cover the backup needs of non-media files such as documents and compressed packages. If this permission is removed, the core functions of "Mobile Phone Backup" and "Photo Album Backup" will not be realized, and your full backup needs cannot be met.<br><br>
-
-	4. Data Security and Compliance Commitments<br><br>
-	1. <strong>No Additional Collection</strong>: Except for the file information you actively select for backup, the Application will not collect or store system files in the device, files in the private directories of other applications, or personal information unrelated to the backup function (such as device identifiers, location information, etc.);<br>
-	2. <strong>No Data Sharing/Leakage</strong>: We will not sell, lease, share, or provide your file information to any third parties (including advertisers, data analysis institutions, etc.) in any form, nor will we upload file information to the cloud server. All backup files are only stored on the external storage device designated by you;<br>
-	3. <strong>Restrictions on Permission Use</strong>: This permission is only used when you actively trigger a backup operation. After the operation is completed, file access will be terminated immediately. There is no behavior of continuously accessing or scanning files in the background;<br>
-	4. <strong>Ownership and Control of Data</strong>: You have full ownership and management rights over all backup files. You can delete or modify backup files at any time through the Application or external devices. The Application will not interfere with or retain any copies of the files.<br><br>
-
-
-	<div class="title">Other Matters</div><br>
-
-	<div class="text">Limited Liability</div>
-	You shall not use the Application in any way that may violate local and international laws. If you have any doubts about compliance with the law, please uninstall the Application.<br><br>
-
-	<div class="text">Changes to This Privacy Policy</div>
-	This Privacy Policy may be updated from time to time due to changes in laws and regulations, function optimizations, and other circumstances. After the update, we will prompt you to view it in a prominent position within the Application (such as the splash screen, settings page). Your continued use of the Application after the update indicates your acceptance of the updated Privacy Policy.<br><br>
-
-	<div class="text">Questions</div>
-	If you have any questions about this Privacy Policy, please contact us at zhifubao@yongdongke.com.<br>
 </div>
 </body>
 </html>
