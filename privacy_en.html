@@ -1,411 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Privacy Policy</title>
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-			font-size: 15px;
-			line-height: 1.85;
-			color: #333;
-			background: linear-gradient(180deg, #e8ecf3 0%, #f0f2f5 40%, #f5f5f7 100%);
-			margin: 0;
-			padding: 0;
-		}
-		#app {
-			max-width: 820px;
-			margin: 0 auto;
-			padding: 50px 24px 70px;
-		}
-
-		/* ===== Hero Header ===== */
-		.hero {
-			text-align: center;
-			padding: 48px 24px 40px;
-			margin-bottom: 28px;
-			background: linear-gradient(135deg, #1a2a4f 0%, #2d4a7f 50%, #3a5a93 100%);
-			border-radius: 16px;
-			box-shadow: 0 8px 30px rgba(26, 42, 79, 0.25);
-		}
-		.hero h1 {
-			font-size: 34px;
-			font-weight: 800;
-			color: #ffffff;
-			margin: 0 0 10px;
-			letter-spacing: 0.5px;
-		}
-		.hero .subtitle {
-			font-size: 15px;
-			color: rgba(255, 255, 255, 0.75);
-			margin: 0 0 6px;
-		}
-		.hero .meta {
-			font-size: 14px;
-			color: rgba(255, 255, 255, 0.6);
-			margin: 0;
-		}
-		.hero .divider {
-			width: 60px;
-			height: 3px;
-			background: rgba(255, 255, 255, 0.35);
-			border-radius: 2px;
-			margin: 16px auto 0;
-		}
-
-		/* ===== Intro ===== */
-		.intro {
-			background: #fff;
-			border-radius: 14px;
-			padding: 24px 28px;
-			margin-bottom: 20px;
-			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-			border-left: 4px solid #3a5a93;
-		}
-
-		/* ===== Section Cards ===== */
-		.section {
-			background: #fff;
-			border-radius: 14px;
-			padding: 28px 28px;
-			margin-bottom: 20px;
-			box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-			transition: box-shadow 0.2s ease;
-		}
-		.section:hover {
-			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		}
-
-		/* ===== Headings ===== */
-		h2 {
-			font-size: 21px;
-			font-weight: 700;
-			color: #1a2a4f;
-			text-align: center;
-			margin: 0 0 20px;
-			padding-bottom: 12px;
-			position: relative;
-		}
-		h2::after {
-			content: "";
-			display: block;
-			width: 48px;
-			height: 3px;
-			background: linear-gradient(90deg, #3a5a93, #6b8ec9);
-			border-radius: 2px;
-			margin: 10px auto 0;
-		}
-		h3 {
-			font-size: 16px;
-			font-weight: 700;
-			color: #2c4a6f;
-			margin: 24px 0 8px;
-			padding-left: 12px;
-			border-left: 3px solid #6b8ec9;
-		}
-
-		/* ===== Text & Lists ===== */
-		p {
-			margin: 10px 0;
-		}
-		ul, ol {
-			padding-left: 24px;
-			margin: 10px 0;
-		}
-		ul li, ol li {
-			margin: 8px 0;
-		}
-		ul li strong, ol li strong {
-			color: #1a2a4f;
-		}
-
-		/* ===== Definition List ===== */
-		.definition-list {
-			list-style: none;
-			padding-left: 0;
-		}
-		.definition-list li {
-			padding: 10px 14px;
-			border-bottom: 1px solid #f0f0f0;
-			border-radius: 6px;
-			transition: background 0.15s ease;
-		}
-		.definition-list li:hover {
-			background: #f8faff;
-		}
-		.definition-list li:last-child {
-			border-bottom: none;
-		}
-		.definition-list li strong {
-			display: inline-block;
-			min-width: 150px;
-			color: #1a2a4f;
-		}
-
-		/* ===== Contact Box ===== */
-		.contact-box {
-			background: linear-gradient(135deg, #eef4ff 0%, #e8f0ff 100%);
-			border: 1px solid #c5d9f5;
-			border-radius: 12px;
-			padding: 20px 24px;
-			margin: 16px 0;
-		}
-		.contact-box p {
-			margin: 6px 0;
-		}
-		.contact-box strong {
-			color: #1a2a4f;
-		}
-
-		/* ===== Footer divider ===== */
-		.footer-note {
-			text-align: center;
-			font-size: 13px;
-			color: #999;
-			margin-top: 30px;
-			padding-top: 20px;
-			border-top: 1px solid #e0e0e0;
-		}
-
-		/* ===== Responsive ===== */
-		@media (max-width: 600px) {
-			#app {
-				padding: 24px 12px 40px;
-			}
-			.hero {
-				padding: 32px 16px 28px;
-			}
-			.hero h1 {
-				font-size: 26px;
-			}
-			.section, .intro {
-				padding: 18px 16px;
-			}
-			h2 {
-				font-size: 18px;
-			}
-			.definition-list li strong {
-				display: block;
-				min-width: auto;
-			}
-		}
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - NQ FileHub / NewQ-B3</title>
+<style>
+:root { color-scheme: light; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+  color: #222;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 42px 24px 72px;
+  background: #fff;
+}
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 23px; margin-top: 34px; margin-bottom: 10px; }
+h3 { font-size: 18px; margin-top: 24px; margin-bottom: 8px; }
+p, li { font-size: 16px; }
+.meta { color: #666; margin-bottom: 28px; }
+.notice {
+  background: #f7f8fa;
+  border-left: 4px solid #555;
+  padding: 14px 16px;
+  margin: 20px 0;
+}
+a { color: #1769aa; overflow-wrap: anywhere; }
+address { font-style: normal; line-height: 1.55; }
+footer { border-top: 1px solid #ddd; margin-top: 42px; padding-top: 18px; color: #666; font-size: 14px; }
+</style>
 </head>
 <body>
-<div id="app">
+<h1>Privacy Policy</h1>
+<p class="meta"><strong>Last Updated:</strong> September 16, 2026</p>
 
-	<div class="hero">
-		<p class="subtitle">Your Privacy Matters</p>
-		<h1>Privacy Policy</h1>
-		<p class="meta">Last Updated: January 1, 2025</p>
-		<div class="divider"></div>
-	</div>
+<p>This Privacy Policy explains how shenzhenshiguangyuantongdadianzishangwu Co., Ltd. ("Company", "we", "us", or "our") handles personal data in connection with the NQ FileHub / NewHub mobile application (the "App") and the NewQ-B3 device.</p>
 
-	<div class="intro">
-		<p>This Privacy Policy describes the policies and procedures regarding the collection, use, and disclosure of information when you use this Application, and informs you about your privacy rights and how the law protects you.</p>
-		<p>We use your personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.</p>
-	</div>
-
-	<!-- ==================== Interpretation and Definitions ==================== -->
-	<div class="section">
-		<h2>Interpretation and Definitions</h2>
-
-		<h3>Interpretation</h3>
-		<p>Words with initial letters capitalized have the meanings defined under the following conditions. Regardless of whether they appear in singular or plural form, the meanings of the following definitions shall remain the same.</p>
-
-		<h3>Definitions</h3>
-		<p>For the purposes of this Privacy Policy:</p>
-		<ul class="definition-list">
-			<li><strong>Account</strong> refers to a unique account created for you to access our Service or parts of our Service.</li>
-			<li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity, or other securities, or the right to vote for the election of directors or other governing bodies.</li>
-			<li><strong>Application</strong> refers to the software program provided by the Company.</li>
-			<li><strong>Company</strong> (referred to as "the Company", "we", "us", or "our" in this Agreement) refers to Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</li>
-			<li><strong>Country</strong> refers to: China</li>
-			<li><strong>Device</strong> refers to any device that can access the Service, such as a computer, mobile phone, or digital tablet.</li>
-			<li><strong>Personal Data</strong> refers to any information relating to an identified or identifiable individual.</li>
-			<li><strong>Service</strong> refers to the software program provided by the Company.</li>
-			<li><strong>Service Provider</strong> refers to any natural or legal person who processes data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, provide the Service on behalf of the Company, perform services related to the Service, or assist the Company in analyzing how the Service is used.</li>
-			<li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
-			<li><strong>You</strong> refers to the individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
-		</ul>
-	</div>
-
-	<!-- ==================== Data Controller ==================== -->
-	<div class="section">
-		<h2>Data Controller Information</h2>
-		<p>For the purposes of applicable data protection laws, including the EU General Data Protection Regulation (GDPR) and the EU Data Act, the Company is the data controller responsible for the processing of your Personal Data. You may contact us at any time regarding the processing of your Personal Data.</p>
-		<div class="contact-box">
-			<p><strong>Data Controller:</strong> Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</p>
-			<p><strong>Contact Email:</strong> zhifubao@yongdongke.com</p>
-		</div>
-	</div>
-
-	<!-- ==================== Collection and Use of Information ==================== -->
-	<div class="section">
-		<h2>Collection and Use of Information</h2>
-
-		<h3>Personal Information</h3>
-		<p>When using our Application, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:</p>
-		<ul>
-			<li>Email address</li>
-			<li>First name and last name</li>
-			<li>Phone number</li>
-			<li>Address, state, province, postal code, city</li>
-		</ul>
-		<p><strong>Disclosure Statement:</strong> The purpose of collecting this information is solely to handle feedback or verify issues arising during your use of our Application. This is also to better improve your experience in using the product. This information will not be uploaded to or shared with any third parties for other purposes.</p>
-
-		<h3>Usage Data</h3>
-		<p>Usage Data is collected automatically when using the Application. Usage Data may include information such as your device's Internet Protocol (IP) address, browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the duration spent on those pages, unique device identifiers, and other diagnostic data.</p>
-		<p>When you access the Service through a mobile device or via a mobile device, we may automatically collect certain information, including but not limited to the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your mobile device operating system, the type of mobile Internet browser you use, unique device identifiers, and other diagnostic data.</p>
-		<p><strong>Disclosure Statement:</strong> The purpose of this information is solely for: analyzing and locating product issues, collecting feedback on errors occurring when you connect external devices while using the Application, and quickly locating and resolving issues reported by users during product use through accurate device IDs.</p>
-	</div>
-
-	<!-- ==================== Contact Information Collection ==================== -->
-	<div class="section">
-		<h2>Contact Information Collection</h2>
-
-		<h3>1. Scope and Purpose of Information Collection</h3>
-		<p>Our Application only collects the contact information list in your device (including basic information such as contact names and phone numbers) when you actively use the core function "Contact Backup and Restore." The purpose of collection is unique and clear: solely to back up contact information to an external storage device designated by you (such as a Type-C mobile hard disk, USB flash drive, etc.), or to restore contacts from a backed-up external storage device to your device. There are no other usage scenarios.</p>
-
-		<h3>2. Authorization Method and User Control Rights</h3>
-		<ol style="padding-left: 28px;">
-			<li><strong>Active Authorization Prompt:</strong> Before using the "Contact Backup and Restore" function, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to contacts"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;</li>
-			<li><strong>Right to Independent Choice:</strong> You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the "Contact Backup and Restore" function will be unavailable. All other important functions of the Application (such as file backup, photo album backup, device management, etc.) can operate normally without affecting your core user experience;</li>
-			<li><strong>Re-authorization Path:</strong> If you have denied the authorization, when you attempt to use the "Contact Backup and Restore" function again later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > [Application] > Permissions > Contacts" on your mobile phone. The permission status will take effect in real time.</li>
-		</ol>
-
-		<h3>3. Data Security and Compliance Commitments</h3>
-		<ol style="padding-left: 28px;">
-			<li><strong>No Additional Collection:</strong> Except for the contact information collected when you actively trigger the "Contact Backup and Restore" function, the Application will not automatically scan or silently collect your contact information in the background, nor will it collect other personal information unrelated to this function (such as device identifiers, location information, etc.);</li>
-			<li><strong>No Data Sharing/Leakage:</strong> We will not sell, lease, share, or provide your contact information to any third parties (including advertisers, data analysis institutions, partners, etc.) in any form. Backup data of contacts is only stored on the external storage device designated by you and will not be uploaded to the Application's cloud server;</li>
-			<li><strong>Ownership and Control of Data:</strong> You have full ownership and management rights over the backed-up contact data. You can view, modify, or delete the backed-up contact information at any time through the Application or the external storage device. The Application will not interfere with or retain any copies of the backup data.</li>
-		</ol>
-	</div>
-
-	<!-- ==================== File Information Management ==================== -->
-	<div class="section">
-		<h2>Management of All File Information</h2>
-
-		<h3>1. Scope and Purpose of Collection</h3>
-		<p>The core functions of our Application are "Mobile Phone Backup" and "Photo Album Backup." We only collect file information explicitly selected by you in your device when you actively use these two functions. Specifically including:</p>
-		<ul>
-			<li>Media files: Pictures, videos, and music files in the photo album;</li>
-			<li>Non-media files: Documents (Word/Excel/PDF, etc.), compressed packages, installation packages, and other full-type files selected by you for backup.</li>
-		</ul>
-		<p>The scope of collection is strictly limited to the files or directories explicitly checked by you. We will not automatically scan or collect unauthorized file information in the device. All file information is only used to realize the core function of "backing up to an external storage device (such as a Type-C mobile hard disk, USB flash drive, etc.)" and has no other purposes.</p>
-
-		<h3>2. Authorization Method and User Control Rights</h3>
-		<ol style="padding-left: 28px;">
-			<li><strong>Permission Application Prompt:</strong> Before using the "Mobile Phone Backup" and "Photo Album Backup" functions, the Application will pop up a system permission authorization window (prompting "Allow/Deny access to all files"), clearly informing you of the purpose of the permission. There are no silent applications, forced authorizations, or similar behaviors;</li>
-			<li><strong>Right to Independent Choice:</strong> You can freely choose to "Allow" or "Deny" the authorization. If you choose "Deny", only the normal use of the "Mobile Phone Backup" and "Photo Album Backup" functions will be affected. Other non-core functions of the Application (such as viewing the list of backed-up files, device connection management, etc.) can operate normally;</li>
-			<li><strong>Re-authorization Path:</strong> If you have denied the authorization, when you reuse the backup function later, the Application will pop up the authorization prompt again; you can also manually enable or disable this permission through the path "Settings > Apps > [Application] > Permissions" on your mobile phone. The permission status will take effect in real time.</li>
-		</ol>
-
-		<h3>3. Explanation of the Necessity of Permission</h3>
-		<p>Our Application applies for the "MANAGE_EXTERNAL_STORAGE" permission because the core functions need to support the backup and management of full-type files (including non-media files). Alternative solutions such as the MediaStore API can only access media files such as pictures, videos, and audio, and cannot cover the backup needs of non-media files such as documents and compressed packages. If this permission is removed, the core functions of "Mobile Phone Backup" and "Photo Album Backup" will not be realized, and your full backup needs cannot be met.</p>
-
-		<h3>4. Data Security and Compliance Commitments</h3>
-		<ol style="padding-left: 28px;">
-			<li><strong>No Additional Collection:</strong> Except for the file information you actively select for backup, the Application will not collect or store system files in the device, files in the private directories of other applications, or personal information unrelated to the backup function (such as device identifiers, location information, etc.);</li>
-			<li><strong>No Data Sharing/Leakage:</strong> We will not sell, lease, share, or provide your file information to any third parties (including advertisers, data analysis institutions, etc.) in any form, nor will we upload file information to the cloud server. All backup files are only stored on the external storage device designated by you;</li>
-			<li><strong>Restrictions on Permission Use:</strong> This permission is only used when you actively trigger a backup operation. After the operation is completed, file access will be terminated immediately. There is no behavior of continuously accessing or scanning files in the background;</li>
-			<li><strong>Ownership and Control of Data:</strong> You have full ownership and management rights over all backup files. You can delete or modify backup files at any time through the Application or external devices. The Application will not interfere with or retain any copies of the files.</li>
-		</ol>
-	</div>
-
-	<!-- ==================== Legal Basis (GDPR) ==================== -->
-	<div class="section">
-		<h2>Legal Basis for Processing</h2>
-		<p>We process your Personal Data on the following legal bases in accordance with applicable data protection laws, including the GDPR:</p>
-		<ul>
-			<li><strong>Consent:</strong> Where you have given clear and affirmative consent to the processing of your Personal Data for specific purposes (e.g., providing personal information for feedback or issue verification).</li>
-			<li><strong>Contractual Necessity:</strong> Where processing is necessary for the performance of a contract to which you are a party or in order to take steps at your request prior to entering into a contract.</li>
-			<li><strong>Legitimate Interests:</strong> Where processing is necessary for the purposes of the legitimate interests pursued by the Company, such as diagnosing technical issues, improving the Service, and ensuring the security of the Application.</li>
-			<li><strong>Legal Obligation:</strong> Where processing is necessary for compliance with a legal obligation to which the Company is subject.</li>
-		</ul>
-		<p>You have the right to withdraw your consent at any time by contacting us at the email provided below. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.</p>
-	</div>
-
-	<!-- ==================== Data Retention ==================== -->
-	<div class="section">
-		<h2>Data Retention</h2>
-		<p>We retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy, or as required by applicable laws and regulations. Specifically:</p>
-		<ul>
-			<li><strong>Personal Information</strong> (such as name, email, phone number, address) provided for feedback or issue verification is retained only until the relevant issue is resolved, and thereafter deleted upon your request or within a reasonable period.</li>
-			<li><strong>Usage Data</strong> is retained for the minimum period necessary to diagnose and resolve technical issues and improve the Service, after which it is deleted or anonymized.</li>
-			<li><strong>Contact and File Backup Data</strong> is stored solely on the external storage device designated by you. The Company does not retain any copies of such data on its servers. You may delete such data at any time through the Application or the external storage device.</li>
-		</ul>
-	</div>
-
-	<!-- ==================== Data Sharing and Disclosure ==================== -->
-	<div class="section">
-		<h2>Data Sharing and Disclosure</h2>
-		<p>We do not sell, rent, lease, share, or otherwise provide your Personal Data to any third party for commercial, advertising, or analytics purposes. Your data is processed and stored locally on your device or on the external storage device designated by you.</p>
-		<p>We may disclose your Personal Data only in the following limited circumstances:</p>
-		<ul>
-			<li><strong>Service Providers:</strong> We may engage third-party service providers to facilitate the Service, perform services on our behalf, or assist in analyzing how the Service is used. These service providers are bound by confidentiality obligations and are only permitted to process Personal Data for the purposes of providing the Service to you.</li>
-			<li><strong>Legal Requirements:</strong> We may disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.</li>
-		</ul>
-	</div>
-
-	<!-- ==================== International Data Transfers ==================== -->
-	<div class="section">
-		<h2>International Data Transfers</h2>
-		<p>The Company is based in China. Your Personal Data is primarily processed and stored on your device or on external storage devices designated by you. We do not transfer your Personal Data to cloud servers or to any party outside of China for processing.</p>
-		<p>In the event that any Personal Data is transferred to a third country, we will ensure that such transfer is carried out in accordance with applicable data protection laws, including by using appropriate safeguards such as Standard Contractual Clauses (SCCs) approved by the European Commission.</p>
-	</div>
-
-	<!-- ==================== Data Subject Rights ==================== -->
-	<div class="section">
-		<h2>Your Privacy Rights (EU/EEA/UK Users)</h2>
-		<p>If you are located in the European Union, the European Economic Area, or the United Kingdom, you have the following rights regarding your Personal Data under the GDPR:</p>
-		<ul>
-			<li><strong>Right of Access:</strong> You have the right to request access to your Personal Data and to obtain copies of it.</li>
-			<li><strong>Right to Rectification:</strong> You have the right to request the correction of any inaccurate or incomplete Personal Data.</li>
-			<li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> You have the right to request the deletion of your Personal Data, subject to certain exceptions.</li>
-			<li><strong>Right to Restriction of Processing:</strong> You have the right to request that we restrict the processing of your Personal Data under certain conditions.</li>
-			<li><strong>Right to Data Portability:</strong> You have the right to receive your Personal Data in a structured, commonly used, and machine-readable format and to transmit it to another controller.</li>
-			<li><strong>Right to Object:</strong> You have the right to object to the processing of your Personal Data based on legitimate interests or for direct marketing purposes.</li>
-			<li><strong>Right to Withdraw Consent:</strong> You have the right to withdraw your consent to the processing of your Personal Data at any time, without affecting the lawfulness of processing prior to withdrawal.</li>
-		</ul>
-		<p>To exercise any of these rights, please contact us at <strong>zhifubao@yongdongke.com</strong>. We will respond to your request within the timeframe required by applicable law (generally within one month).</p>
-
-		<h3>Right to Lodge a Complaint</h3>
-		<p>You have the right to lodge a complaint with a supervisory authority, in particular in the EU member state of your habitual residence, place of work, or the place of the alleged infringement, if you believe that our processing of your Personal Data infringes applicable data protection laws.</p>
-	</div>
-
-	<!-- ==================== Children's Privacy ==================== -->
-	<div class="section">
-		<h2>Children's Privacy</h2>
-		<p>Our Application is not directed to children under the age of 16. We do not knowingly collect any Personal Data from children. If you are a parent or guardian and you believe your child has provided us with Personal Data, please contact us so that we can take appropriate action to delete such data.</p>
-	</div>
-
-	<!-- ==================== Other Matters ==================== -->
-	<div class="section">
-		<h2>Other Matters</h2>
-
-		<h3>Limited Liability</h3>
-		<p>You shall not use the Application in any way that may violate local and international laws. If you have any doubts about compliance with the law, please uninstall the Application.</p>
-
-		<h3>Changes to This Privacy Policy</h3>
-		<p>This Privacy Policy may be updated from time to time due to changes in laws and regulations, function optimizations, and other circumstances. After the update, we will prompt you to view it in a prominent position within the Application (such as the splash screen, settings page). Your continued use of the Application after the update indicates your acceptance of the updated Privacy Policy.</p>
-
-		<h3>Contact Us</h3>
-		<p>If you have any questions, concerns, or requests regarding this Privacy Policy or the processing of your Personal Data, please contact us at:</p>
-		<div class="contact-box">
-			<p><strong>Company:</strong> Shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</p>
-			<p><strong>Email:</strong> zhifubao@yongdongke.com</p>
-		</div>
-	</div>
-
-	<div class="footer-note">
-		&copy; 2025 Shenzhenshiguangyuantongdadianzishangwu Co., Ltd. All rights reserved.
-	</div>
-
+<div class="notice">
+<strong>Local-first design.</strong> The core file-management, backup, restore, and local device-management functions of the NewQ-B3 do not require a NewQ-operated cloud storage service. User files are handled locally between the mobile device, the NewQ-B3, and storage media selected by the user.
 </div>
+
+<h2>1. Data Controller and Contact Information</h2>
+<p>For personal data that the Company itself processes, the data controller is:</p>
+<address>
+<strong>shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</strong><br>
+longhuaquminzhijiedaozhangkengshequqingchuangcheng<br>Ddong4A5<br>shenzhenshi<br>guangdongsheng<br>518000<br>CN<br>
+Email: <a href="mailto:zhifubao@yongdongke.com">zhifubao@yongdongke.com</a>
+</address>
+
+<h2>2. Scope of This Policy</h2>
+<p>This Policy applies to the App and the NewQ-B3 functions described in the applicable user manual, including local file management, photo backup, contact backup, camera-related local saving, access to attached SD/USB storage, local device status display, and local network/device management.</p>
+
+<h2>3. No NewQ Account Required for Core B3 Functions</h2>
+<p>The core local functions of the NewQ-B3 described above do not require a NewQ user account. We do not operate a NewQ cloud service for storing your photos, videos, music, documents, contacts, B3 configuration data, or continuous B3 usage telemetry as part of these core functions.</p>
+
+<h2>4. Information Processed by the App</h2>
+
+<h3>4.1 Files Selected by You</h3>
+<p>When you actively use file management, mobile-phone backup, photo backup, or similar functions, the App accesses only the files and folders necessary for the action you request, subject to the permissions granted on your mobile device.</p>
+<ul>
+<li>Examples include photos, videos, music, documents, and other files selected for copying, backup, restore, viewing, or management.</li>
+<li>These files are transferred locally to or from storage media connected to the NewQ-B3, such as an SD card, USB flash drive, HDD, or SSD.</li>
+<li>The Company does not upload or retain copies of these user files on a NewQ-operated cloud server.</li>
+</ul>
+
+<h3>4.2 Contacts</h3>
+<p>If you actively use the contact backup or restore function, the App may request access to contacts through the permission system of your mobile operating system.</p>
+<ul>
+<li>Contact data is used only to perform the backup or restore action requested by you.</li>
+<li>Backed-up contact data is stored on the storage medium selected by you.</li>
+<li>The Company does not upload or retain copies of your contact backup on a NewQ-operated cloud server.</li>
+<li>If you deny the contacts permission, the contact backup/restore function may not work, while unrelated App functions can remain available.</li>
+</ul>
+
+<h3>4.3 Local Network and Device Information</h3>
+<p>To communicate with the NewQ-B3 over the local network, the App may locally process technical information needed to establish and display the connection, such as the B3 device name, connection status, storage capacity/available capacity, network mode, transfer status, and similar local operational information. This information is used to provide the requested B3 functions and is not continuously uploaded to a NewQ telemetry cloud.</p>
+
+<h3>4.4 App Cache</h3>
+<p>The App may store cache data locally on your mobile device to support normal operation and faster display of locally available information. Cache data remains stored until you use the App's cache-clearing function, uninstall the App, or reset the mobile device, depending on the operating system and device behavior.</p>
+
+<h3>4.5 Crash and Stability Diagnostics Provided by Apple or Google</h3>
+<p>On iOS, Apple may provide app crash statistics and crash reports through App Store Connect. On Android, Google may provide app quality and stability information through Google Play Console, including Android Vitals.</p>
+<ul>
+<li>These are platform-native diagnostic functions operated by Apple or Google.</li>
+<li>We do not operate a separate NewQ cloud telemetry or crash-analysis server for the B3 App.</li>
+<li>The exact diagnostic data made available, its retention period, and related processing are determined by Apple or Google and may depend on platform settings and user choices.</li>
+<li>Where these reports are made available to us, we use them for app stability, troubleshooting, and product improvement.</li>
+</ul>
+
+<h3>4.6 Information You Provide to Customer Support</h3>
+<p>If you contact us voluntarily, we may process the information included in your message, such as your email address, order information, device information, screenshots, videos, or other troubleshooting information you choose to provide. We use this information to respond to your request, provide support, and diagnose the reported issue.</p>
+
+<h2>5. Permissions</h2>
+<p>The App may request system permissions that are necessary for specific user-initiated functions, including access to photos/media/files, contacts, camera, or local network features, depending on your operating system and App version. You can manage permissions through your mobile device settings. Denying a permission may prevent the related function from operating but does not automatically prevent unrelated functions from being used.</p>
+
+<h2>6. Purposes and Legal Bases</h2>
+<p>Where the GDPR or similar data-protection law applies, we process personal data only where a valid legal basis is available. Depending on the situation, this may include:</p>
+<ul>
+<li><strong>Performance of a contract or user request:</strong> to provide the App functions or customer support requested by you.</li>
+<li><strong>Legitimate interests:</strong> to maintain App stability, diagnose technical problems, prevent misuse, and improve product reliability, provided those interests are not overridden by your rights and interests.</li>
+<li><strong>Consent:</strong> where the operating system or applicable law requires your consent for a specific permission or processing activity.</li>
+<li><strong>Legal obligations:</strong> where processing is necessary to comply with applicable law.</li>
+</ul>
+
+<h2>7. Data Sharing</h2>
+<p>We do not sell your personal data and do not use your B3 user files for advertising.</p>
+<p>Data may be processed by third parties only where relevant to the service you use, including:</p>
+<ul>
+<li><strong>Apple:</strong> for iOS/App Store platform functions and platform-native crash/stability diagnostics.</li>
+<li><strong>Google:</strong> for Android/Google Play platform functions and platform-native crash/stability diagnostics, including Android Vitals.</li>
+<li><strong>Service providers used for support or communications:</strong> only where necessary to deliver the relevant service and subject to applicable data-protection requirements.</li>
+<li><strong>Authorities:</strong> where disclosure is required by applicable law or a valid legal request.</li>
+</ul>
+<p>Your user-selected files and contact backups are not uploaded to Apple, Google, or a NewQ cloud by the B3 backup function itself. This statement does not limit independent operating-system or platform processing that may occur under Apple or Google policies.</p>
+
+<h2>8. Data Retention</h2>
+<ul>
+<li><strong>User files and contact backups:</strong> remain on the storage medium chosen by you until you delete, overwrite, or format them.</li>
+<li><strong>App cache:</strong> remains locally until cleared in the App, the App is uninstalled, or the mobile device is reset, as applicable.</li>
+<li><strong>Customer-support communications:</strong> are retained only as long as reasonably necessary to handle the request, maintain appropriate support records, or comply with legal obligations.</li>
+<li><strong>Apple/Google diagnostics:</strong> retention is governed by the relevant platform and is not controlled by a NewQ-operated diagnostic cloud.</li>
+</ul>
+
+<h2>9. International Data Processing</h2>
+<p>The Company is based in China. If you contact us for support, information you voluntarily provide may be received and processed by the Company in China. Apple and Google may process platform diagnostic information in locations determined by their own services and policies. Where international transfers of personal data are subject to applicable data-protection requirements, they will be handled in accordance with those requirements.</p>
+
+<h2>10. Security</h2>
+<p>We take reasonable organizational and technical measures appropriate to the nature of the information we process. Because the B3 is designed primarily for local access, you are also responsible for protecting your mobile device, B3 Wi-Fi credentials, local network access, and connected storage media.</p>
+
+<h2>11. Your Privacy Rights</h2>
+<p>Depending on where you live and the law that applies, you may have rights such as access, rectification, erasure, restriction, objection, data portability, or withdrawal of consent. These rights apply to personal data that the Company actually controls or processes.</p>
+<p>For user files stored only on your own storage media or cache stored only on your mobile device, you normally exercise control directly by deleting or managing the relevant local data.</p>
+<p>To exercise a privacy right concerning data held by the Company, contact <a href="mailto:zhifubao@yongdongke.com">zhifubao@yongdongke.com</a>. You may also have the right to complain to a competent data-protection authority.</p>
+
+<h2>12. Children's Privacy</h2>
+<p>The App is not directed to children under the age at which independent consent is permitted under applicable law. We do not knowingly seek to collect personal data from children through the core B3 functions.</p>
+
+<h2>13. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy when App functions, legal requirements, or our data practices change. The current version will be made available through the published privacy-policy page and may also be linked from the App or related product documentation.</p>
+
+<h2>14. Related Terms</h2>
+<p>Our current Terms of Service are available at:<br>
+<a href="https://yyydkk.github.io/support/terms_of_service_en.html">https://yyydkk.github.io/support/terms_of_service_en.html</a></p>
+
+<h2>15. Contact Us</h2>
+<address>
+<strong>shenzhenshiguangyuantongdadianzishangwu Co., Ltd.</strong><br>
+longhuaquminzhijiedaozhangkengshequqingchuangcheng<br>Ddong4A5<br>shenzhenshi<br>guangdongsheng<br>518000<br>CN<br>
+Email: <a href="mailto:zhifubao@yongdongke.com">zhifubao@yongdongke.com</a>
+</address>
+
+<footer>© 2026 shenzhenshiguangyuantongdadianzishangwu Co., Ltd.. All rights reserved.</footer>
 </body>
 </html>
